@@ -9,7 +9,7 @@ def initialize(name)
 end
 
 def back_project(project)
-  existingproject = @backed_projects.find { |oldproject| oldproject.name == project.name }
+  existingproject = @backed_projects.find { |oldproject| oldproject == project }
   if existingproject = nil then
     @backed_projects << project
     project.add_backer(self)
